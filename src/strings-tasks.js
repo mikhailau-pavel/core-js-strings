@@ -4,8 +4,6 @@
  * https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String   *
  *                                                                                           *
  ******************************************************************************************* */
-
-
 /**
  * Returns the result of concatenation of two strings.
  *
@@ -21,7 +19,6 @@
 function concatenateStrings(value1, value2) {
   return value1.concat(value2);
 }
-
 
 /**
  * Returns the length of given string.
@@ -52,7 +49,7 @@ function getStringLength(value) {
  *   'Chuck','Norris'  => 'Hello, Chuck Norris!'
  */
 function getStringFromTemplate(firstName, lastName) {
-  return (`Hello, ${firstName} ${lastName}!`);
+  return `Hello, ${firstName} ${lastName}!`;
 }
 
 /**
@@ -68,7 +65,6 @@ function getStringFromTemplate(firstName, lastName) {
 function extractNameFromTemplate(value) {
   return value.substring(7, value.length - 1);
 }
-
 
 /**
  * Returns a first char of the given string.
@@ -145,7 +141,6 @@ function unbracketTag(str) {
   return str.slice(1, -1);
 }
 
-
 /**
  * Converts all characters of the specified string into the upper case
  *
@@ -206,7 +201,6 @@ function getRectangleString(/* width, height */) {
   throw new Error('Not implemented');
 }
 
-
 /**
  * Encode specified string with ROT13 cipher
  * See details:  https://en.wikipedia.org/wiki/ROT13
@@ -249,7 +243,6 @@ function isString(value) {
   return false;
 }
 
-
 /**
  * Returns playid card id.
  *
@@ -275,13 +268,62 @@ function isString(value) {
  *   'K♠' => 51
  */
 function getCardId(value) {
-  const cardArr = ['A♣', '2♣', '3♣', '4♣', '5♣', '6♣', '7♣', '8♣', '9♣', '10♣', 'J♣', 'Q♣', 'K♣',
-    'A♦', '2♦', '3♦', '4♦', '5♦', '6♦', '7♦', '8♦', '9♦', '10♦', 'J♦', 'Q♦', 'K♦',
-    'A♥', '2♥', '3♥', '4♥', '5♥', '6♥', '7♥', '8♥', '9♥', '10♥', 'J♥', 'Q♥', 'K♥',
-    'A♠', '2♠', '3♠', '4♠', '5♠', '6♠', '7♠', '8♠', '9♠', '10♠', 'J♠', 'Q♠', 'K♠'];
+  const cardArr = [
+    'A♣',
+    '2♣',
+    '3♣',
+    '4♣',
+    '5♣',
+    '6♣',
+    '7♣',
+    '8♣',
+    '9♣',
+    '10♣',
+    'J♣',
+    'Q♣',
+    'K♣',
+    'A♦',
+    '2♦',
+    '3♦',
+    '4♦',
+    '5♦',
+    '6♦',
+    '7♦',
+    '8♦',
+    '9♦',
+    '10♦',
+    'J♦',
+    'Q♦',
+    'K♦',
+    'A♥',
+    '2♥',
+    '3♥',
+    '4♥',
+    '5♥',
+    '6♥',
+    '7♥',
+    '8♥',
+    '9♥',
+    '10♥',
+    'J♥',
+    'Q♥',
+    'K♥',
+    'A♠',
+    '2♠',
+    '3♠',
+    '4♠',
+    '5♠',
+    '6♠',
+    '7♠',
+    '8♠',
+    '9♠',
+    '10♠',
+    'J♠',
+    'Q♠',
+    'K♠',
+  ];
   return cardArr.indexOf(value);
 }
-
 
 module.exports = {
   concatenateStrings,
